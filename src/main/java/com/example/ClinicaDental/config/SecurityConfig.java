@@ -35,9 +35,9 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/doctores/", "/api/pacientes/").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/doctores/", "/api/pacientes/").authenticated()
                         .requestMatchers(HttpMethod.PUT, "/api/doctores/", "/api/pacientes/").authenticated()
-                        .requestMatchers(HttpMethod.DELETE, "/api/doctores/", "/api/pacientes/").authenticated()
+                        //.requestMatchers(HttpMethod.DELETE, "/api/doctores/", "/api/pacientes/").authenticated()
                         // Solo ADMIN puede eliminar
-                        //.requestMatchers(HttpMethod.DELETE, "/api/").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/").hasRole("ADMIN")
                         .anyRequest().permitAll()
                 )
                 .sessionManagement(session -> session

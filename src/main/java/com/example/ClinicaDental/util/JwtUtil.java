@@ -15,7 +15,7 @@ import java.util.Map;
 public class JwtUtil {
 
     // Clave de 256 bits (32 bytes) en Base64 - requerido por HS256
-    private static final String SECRET_KEY = "clinica_dental";
+    private static final String SECRET_KEY = "clinica_dental-1234567891011121314151617181920";
     private static final long EXPIRATION_TIME = 86400000; // 24 horas
 
     private Key getSigningKey() {
